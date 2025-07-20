@@ -15,43 +15,54 @@
       width: 500px;
     }
     .section-divider {
-      width: 700px;
+      max-width: 95%;
+      width: 500px;
       border: none;
       border-top: 2px solid #ccc;
-      margin: 60px auto 30px auto;
+      margin: 40px auto 30px auto;
     }
     .container {
       max-width: 700px;
       margin: 0 auto; /* horizontally center */
       text-align: center; /* optional: center text */
     }
+    .section-container {
+      display: flex; 
+      justify-content: center;
+    }
+    .section-content {
+      text-align: left; 
+      max-width: 95%;
+      width: 500px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="profile.png" alt="My Photo" class="profile-pic"/>
-    <h1>Hello, I'm Ivan Eroshenko</h1>
-    <div style="display: flex; justify-content: center;">
-      <div style="text-align: left; width: 65%;">
+    <div class="section-container">
+      <div class="section-content">
+        <h1>Hello, I'm Ivan Eroshenko</h1>
         <p>I'm a software engineer. Welcome to my site!</p>
         <p>I'm interested in:</p>
         <ul style="list-style-position: inside; padding-left: 0; margin: 0;">
           <li>tech - particularly LLMs, distributed systems and algorithmic problem solving
           </li>
           <li>counterintuitive truths</li>
-          <!-- <li>learning how things work behind the scenes</li> -->
           <li>history of Rome</li>
           <li>impact of ecosystem (habbits, diet, etc.) on 🔋🧠🏆</li>
         </ul>
+        <p><a href="https://github.com/ieroshenko">GitHub</a> | <a href="https://www.linkedin.com/in/ieroshenko">LinkedIn</a> | <a>ivaneroshnko at gmail dot com</a></p>
       </div>
     </div>
-    <p><a href="https://github.com/ieroshenko">GitHub</a> | <a href="https://www.linkedin.com/in/ieroshenko">LinkedIn</a> | <a>ivaneroshnko at gmail dot com</a></p>
     <hr class="section-divider" />
-    <h2>📝 Blog</h2>
-    <p><a href="blog/blog1.html">My First Blog Post</a></p>
-    <p><a href="blog/blog2.html">Another Post (coming soon)</a></p>
-  <!--   <hr class="section-divider" />
-    <h2>📚 Books</h2> -->
+    <div class="section-container">
+      <div class="section-content">
+        <h2>📝 Blog</h2>
+        <p><a href="blog/blog1.html">My First Blog Post</a></p>
+        <p><a href="blog/blog2.html">Another Post (coming soon)</a></p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
